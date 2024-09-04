@@ -1,0 +1,37 @@
+{
+	"name": "setvariable",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "filetype",
+					"value": {
+						"value": "@replace(pipeline().parameters.filename,'sales','')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"filename": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"filetype": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-08-24T15:06:32Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

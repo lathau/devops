@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adflearningagain"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_linkedservice_password": {
+			"value": ""
+		},
+		"SqlServer1_linkedservice_properties_typeProperties_server": {
+			"value": "sreesree.netdb"
+		},
+		"SqlServer1_linkedservice_properties_typeProperties_database": {
+			"value": "@{linkedService().dbname}"
+		},
+		"SqlServer1_linkedservice_properties_typeProperties_userName": {
+			"value": "sreesree"
+		},
+		"eventbased trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/8c24cdd8-9ce3-48fa-9a72-dfe052f22ec1/resourceGroups/learningadf/providers/Microsoft.Storage/storageAccounts/adflearningagainstorage"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
